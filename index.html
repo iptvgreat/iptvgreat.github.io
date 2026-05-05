@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTVGreat — The Best IPTV Service Provider 2026</title>
+    <meta name="description" content="IPTV Great delivers 140,000+ live TV channels, 100,000+ Movies & Series, and crystal-clear 4K streaming. Seven years of trusted service. Zero buffering.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #f9faff;
+            color: #787c8b;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== SKIP LINKS ===== */
+        .skip-links a {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            background: #7c3aed;
+            color: #fff;
+            padding: 10px 20px;
+            z-index: 10000;
+            font-weight: 600;
+        }
+        .skip-links a:focus { top: 0; }
+
+        /* ===== HEADER ===== */
+        .top-bar {
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: #fff;
+            text-align: center;
+            padding: 8px 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .top-bar a {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 4px 16px;
+            border-radius: 20px;
+            margin-left: 8px;
+            font-size: 13px;
+            color: #fff;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        .top-bar a:hover { background: rgba(255,255,255,0.3); }
+
+        header {
+            background: #fff;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+        nav ul {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+        nav ul li a {
+            padding: 8px 14px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #2d2d3a;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+        nav ul li a:hover { background: #f3f0ff; color: #7c3aed; }
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .header-actions a {
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 20px;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .header-actions .btn-cart {
+            background: #f3f0ff;
+            color: #7c3aed;
+        }
+        .header-actions .btn-cart:hover { background: #e8e0ff; }
+        .header-actions .btn-checkout {
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: #fff;
+        }
+        .header-actions .btn-checkout:hover { opacity: 0.9; }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #2d2d3a;
+            cursor: pointer;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 80px 20px 60px;
+            text-align: center;
+            background: linear-gradient(180deg, #f9faff 0%, #f0edff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(124,58,237,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,107,157,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: #fff;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            letter-spacing: 0.5px;
+        }
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 800;
+            color: #1a1a2e;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, #7c3aed, #ff6b9d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 18px;
+            color: #5a5d6e;
+            max-width: 700px;
+            margin: 0 auto 32px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero p strong { color: #2d2d3a; }
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: #fff;
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 8px 24px rgba(124,58,237,0.3);
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(124,58,237,0.4); }
+        .btn-secondary {
+            background: #fff;
+            color: #7c3aed;
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 16px;
+            display: inline-block;
+            border: 2px solid #e8e0ff;
+            transition: all 0.3s;
+        }
+        .btn-secondary:hover { border-color: #7c3aed; background: #f8f5ff; }
+        .hero-trust {
+            margin-top: 28px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: #8a8d9e;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-trust span { display: flex; align-items: center; gap: 6px; }
+        .hero-trust .dot { color: #7c3aed; }
+        .hero-rating {
+            margin-top: 16px;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-rating a {
+            color: #7c3aed;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .hero-rating .stars { color: #f59e0b; }
+
+        /* ===== STATS BAR ===== */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.06);
+            max-width: 1000px;
+            margin: -40px auto 0;
+            padding: 30px 20px;
+            position: relative;
+            z-index: 2;
+        }
+        .stat-item {
+            text-align: center;
+            border-right: 1px solid #eeeef4;
+            padding: 10px;
+        }
+        .stat-item:last-child { border-right: none; }
+        .stat-number {
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #8a8d9e;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        /* ===== SECTION COMMON ===== */
+        section { padding: 80px 20px; }
+        .section-tag {
+            display: inline-block;
+            font-size: 13px;
+            font-weight: 700;
+            color: #7c3aed;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-size: 38px;
+            font-weight: 800;
+            color: #1a1a2e;
+            text-align: center;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .section-sub {
+            text-align: center;
+            font-size: 17px;
+            color: #5a5d6e;
+            max-width: 650px;
+            margin: 0 auto 48px;
+        }
+        .section-sub strong { color: #2d2d3a; }
+        .section-title-left { text-align: left; }
+        .section-sub-left { text-align: left; margin: 0 0 32px; }
+
+        /* ===== WHAT WE OFFER ===== */
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .offer-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 36px 28px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+            transition: all 0.3s;
+            border: 1px solid #f0f0f6;
+        }
+        .offer-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+        .offer-icon {
+            font-size: 36px;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .offer-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 12px;
+        }
+        .offer-card p {
+            font-size: 15px;
+            color: #5a5d6e;
+            line-height: 1.7;
+        }
+        .offer-card p strong { color: #7c3aed; }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-content ul {
+            margin: 20px 0 28px;
+        }
+        .about-content ul li {
+            padding: 8px 0;
+            font-size: 15px;
+            color: #5a5d6e;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .about-content ul li::before {
+            content: '✓';
+            color: #10b981;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .about-content p { font-size: 16px; color: #5a5d6e; line-height: 1.8; }
+        .about-content p strong { color: #2d2d3a; }
+        .about-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .about-stat-card {
+            background: #fff;
+            border-radius: 14px;
+            padding: 24px 20px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f6;
+        }
+        .about-stat-card .num {
+            font-size: 28px;
+            font-weight: 800;
+            color: #7c3aed;
+        }
+        .about-stat-card .lbl {
+            font-size: 13px;
+            font-weight: 600;
+            color: #8a8d9e;
+            margin-top: 4px;
+        }
+        .about-rating-box {
+            grid-column: span 2;
+            background: linear-gradient(135deg, #f8f5ff, #fff);
+            border-radius: 14px;
+            padding: 20px 24px;
+            text-align: center;
+            border: 1px solid #e8e0ff;
+        }
+        .about-rating-box a {
+            color: #7c3aed;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .about-rating-box .stars { color: #f59e0b; font-size: 18px; }
+        .about-rating-box .big { font-size: 22px; font-weight: 800; color: #1a1a2e; }
+
+        /* ===== WHY CHOOSE ===== */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .why-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f6;
+            transition: all 0.3s;
+        }
+        .why-card:hover { transform: translateY(-3px); }
+        .why-icon { font-size: 32px; margin-bottom: 14px; display: block; }
+        .why-card h3 { font-size: 18px; font-weight: 700; color: #1a1a2e; margin-bottom: 8px; }
+        .why-card p { font-size: 14px; color: #5a5d6e; line-height: 1.7; }
+
+        /* ===== PRICING ===== */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .pricing-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px 24px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f6;
+            transition: all 0.3s;
+            text-align: center;
+            position: relative;
+        }
+        .pricing-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.08); }
+        .pricing-card.popular {
+            border: 2px solid #7c3aed;
+            box-shadow: 0 8px 32px rgba(124,58,237,0.15);
+        }
+        .pricing-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: #fff;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+        .pricing-badge.orange { background: linear-gradient(135deg, #d97706, #f59e0b); }
+        .pricing-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+        }
+        .pricing-card .sub {
+            font-size: 14px;
+            color: #8a8d9e;
+            margin-bottom: 20px;
+        }
+        .pricing-card .price {
+            font-size: 36px;
+            font-weight: 800;
+            color: #1a1a2e;
+            margin-bottom: 20px;
+        }
+        .pricing-card .price small {
+            font-size: 16px;
+            font-weight: 500;
+            color: #8a8d9e;
+        }
+        .pricing-card ul {
+            text-align: left;
+            margin-bottom: 24px;
+        }
+        .pricing-card ul li {
+            padding: 6px 0;
+            font-size: 14px;
+            color: #5a5d6e;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .pricing-card ul li::before {
+            content: '✓';
+            color: #10b981;
+            font-weight: 700;
+        }
+        .btn-pricing {
+            display: block;
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: #fff;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+        .btn-pricing:hover { opacity: 0.9; transform: translateY(-1px); }
+        .btn-pricing.outline {
+            background: transparent;
+            color: #7c3aed;
+            border: 2px solid #e8e0ff;
+        }
+        .btn-pricing.outline:hover { background: #f8f5ff; border-color: #7c3aed; }
+
+        /* ===== REVIEWS ===== */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        .review-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            border: 1px solid #f0f0f6;
+        }
+        .review-stars { color: #f59e0b; font-size: 18px; margin-bottom: 12px; }
+        .review-card blockquote {
+            font-size: 15px;
+            color: #5a5d6e;
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .review-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .review-name { font-weight: 700; color: #1a1a2e; font-size: 14px; }
+        .review-location { font-size: 12px; color: #8a8d9e; }
+        .reviews-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .reviews-cta a {
+            color: #7c3aed;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .reviews-cta .stars { color: #f59e0b; }
+
+        /* ===== FAQ ===== */
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            border: 1px solid #f0f0f6;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 20px 24px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #1a1a2e;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            font-family: 'DM Sans', sans-serif;
+        }
+        .faq-question:hover { background: #faf9ff; }
+        .faq-question .icon { transition: transform 0.3s; font-size: 14px; color: #7c3aed; }
+        .faq-question.active .icon { transform: rotate(180deg); }
+        .faq-answer {
+            padding: 0 24px 20px;
+            font-size: 15px;
+            color: #5a5d6e;
+            line-height: 1.7;
+            display: none;
+        }
+        .faq-answer.open { display: block; }
+        .faq-answer strong { color: #2d2d3a; }
+
+        /* ===== COMPARISON TABLE ===== */
+        .table-wrap {
+            max-width: 800px;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+        .cmp-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+        }
+        .cmp-table th {
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: #fff;
+            padding: 16px 20px;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: left;
+        }
+        .cmp-table th:first-child { border-radius: 0; }
+        .cmp-table td {
+            padding: 14px 20px;
+            font-size: 15px;
+            border-bottom: 1px solid #f0f0f6;
+            color: #5a5d6e;
+        }
+        .cmp-table tr:last-child td { border-bottom: none; }
+        .cmp-table td:first-child { font-weight: 600; color: #2d2d3a; }
+        .cmp-table .highlight { color: #10b981; font-weight: 700; }
+
+        /* ===== COUNTRIES ===== */
+        .countries-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 24px 0 40px;
+        }
+        .country-tag {
+            background: #fff;
+            border: 1px solid #f0f0f6;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #5a5d6e;
+        }
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin: 16px 0;
+        }
+        .payment-badge {
+            background: #fff;
+            border: 1px solid #f0f0f6;
+            padding: 10px 22px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            color: #2d2d3a;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .cta-section h2 {
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .cta-section p {
+            font-size: 17px;
+            max-width: 600px;
+            margin: 0 auto 32px;
+            opacity: 0.9;
+        }
+        .cta-section .btn-primary {
+            background: #fff;
+            color: #7c3aed;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+        .cta-section .btn-primary:hover { transform: translateY(-2px); }
+        .cta-section .btn-secondary {
+            background: transparent;
+            color: #fff;
+            border-color: rgba(255,255,255,0.3);
+        }
+        .cta-section .btn-secondary:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+        .cta-rating { margin-top: 20px; font-size: 15px; opacity: 0.85; }
+        .cta-rating a { color: #fff; font-weight: 600; }
+        .cta-rating .stars { color: #fbbf24; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #1a1a2e;
+            color: #9ca3af;
+            text-align: center;
+            padding: 32px 20px;
+            font-size: 14px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 36px; }
+            .offer-grid { grid-template-columns: repeat(2, 1fr); }
+            .why-grid { grid-template-columns: repeat(2, 1fr); }
+            .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+            .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .stat-item { border-right: none; }
+        }
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 16px; }
+            nav.open { display: block; }
+            nav ul { flex-direction: column; gap: 4px; }
+            nav ul li a { display: block; padding: 12px 16px; }
+            .header-actions { display: none; }
+            .about-grid { grid-template-columns: 1fr; gap: 32px; }
+            .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+            .offer-grid { grid-template-columns: 1fr; max-width: 450px; margin: 0 auto; }
+            .why-grid { grid-template-columns: 1fr; max-width: 450px; margin: 0 auto; }
+            .reviews-grid { grid-template-columns: 1fr; max-width: 450px; margin: 0 auto; }
+            .hero h1 { font-size: 28px; }
+            .section-title { font-size: 28px; }
+            .stats-bar { margin-top: -20px; padding: 20px 16px; }
+            .stat-number { font-size: 24px; }
+            section { padding: 48px 16px; }
+            .hero { padding: 48px 16px 40px; }
+            .about-stats { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 24px; }
+            .btn-primary, .btn-secondary { padding: 14px 24px; font-size: 14px; width: 100%; text-align: center; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .stats-bar { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===== SKIP LINKS ===== -->
+<div class="skip-links">
+    <a href="#main">Skip to content</a>
+    <a href="#footer">Skip to footer</a>
+</div>
+
+<!-- ===== TOP BAR ===== -->
+<div class="top-bar">
+    Exclusive Offer! Get 90% off on lifetime deals. Limited time offer!
+    <a href="https://iptvgreat.store/shop/" target="_blank" rel="noopener">Grab the Deal →</a>
+</div>
+
+<!-- ===== HEADER ===== -->
+<header>
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <img src="https://i0.wp.com/iptvgreat.store/wp-content/uploads/2021/11/logo-1.png?fit=2022%2C302&ssl=1" alt="IPTV Great" loading="lazy">
+        </a>
+        <button class="menu-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="https://iptvgreat.store/shop/" target="_blank" rel="noopener">Package</a></li>
+                <li><a href="https://iptvgreat.store/channels-list/" target="_blank" rel="noopener">Channels</a></li>
+                <li><a href="https://iptvgreat.store/main/installation/" target="_blank" rel="noopener">Installation</a></li>
+                <li><a href="https://iptvgreat.store/main/faq/" target="_blank" rel="noopener">FAQ</a></li>
+                <li><a href="https://iptvgreat.store/main/free-trial/" target="_blank" rel="noopener">Free Trial</a></li>
+                <li><a href="https://iptvgreat.store/main/contact/" target="_blank" rel="noopener">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="https://iptvgreat.club/cart/" class="btn-cart" target="_blank" rel="noopener"><i class="fas fa-shopping-cart"></i> Cart</a>
+            <a href="https://iptvgreat.club/checkout" class="btn-checkout" target="_blank" rel="noopener">Checkout</a>
+        </div>
+    </div>
+</header>
+
+<main id="main">
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <span class="hero-badge">RATED #1 IPTV PROVIDER — 4.93 STARS ON RATINGFACTS</span>
+    <h1>IPTVGreat — <span>The Best IPTV Service Provider 2026</span></h1>
+    <p>IPTV Great delivers <strong>140,000+ live TV channels</strong>, <strong>100,000+ Movies & Series</strong>, and crystal-clear <strong>4K streaming</strong>. Seven years of trusted service. Zero buffering. Pure entertainment.</p>
+    <div class="hero-buttons">
+        <a href="https://iptvgreat.store/shop/" class="btn-primary" target="_blank" rel="noopener">Get Started Now</a>
+        <a href="https://iptvgreat.store/shop/" class="btn-secondary" target="_blank" rel="noopener">View Packages</a>
+    </div>
+    <div class="hero-trust">
+        <span><span class="dot">●</span> Instant Activation</span>
+        <span><span class="dot">●</span> 24/7 Support</span>
+        <span><span class="dot">●</span> 140K+ Channels</span>
+        <span><span class="dot">●</span> 7 Years Trusted</span>
+    </div>
+    <div class="hero-rating">
+        <a href="https://ratingfacts.com/reviews/iptvgreat.com" target="_blank" rel="noopener">
+            <span class="stars">★</span> <strong>4.93</strong> / 5 · 146 verified reviews on <strong>RatingFacts</strong>
+        </a>
+    </div>
+</section>
+
+<!-- ===== STATS BAR ===== -->
+<div class="stats-bar container">
+    <div class="stat-item">
+        <div class="stat-number">140K+</div>
+        <div class="stat-label">LIVE TV CHANNELS</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-number">100K+</div>
+        <div class="stat-label">MOVIES &amp; SERIES</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-number">99.99%</div>
+        <div class="stat-label">UPTIME GUARANTEED</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-number">7+</div>
+        <div class="stat-label">YEARS TRUSTED</div>
+    </div>
+</div>
+
+<!-- ===== WHAT WE OFFER ===== -->
+<section>
+    <div class="container">
+        <span class="section-tag">WHAT WE OFFER</span>
+        <h2 class="section-title">Everything You Need in One IPTV Subscription</h2>
+        <p class="section-sub">IPTVGreat is the <strong>best iptv provider</strong> delivering unlimited entertainment — live sports, 4K movies, international channels, and premium VOD in one affordable <strong>iptv subscription</strong>.</p>
+        <div class="offer-grid">
+            <div class="offer-card">
+                <span class="offer-icon">🎬</span>
+                <h3>Movies &amp; VOD</h3>
+                <p>100,000+ on-demand movies in HD, FHD &amp; 4K. Updated daily. Largest VOD library among all <strong>iptv providers</strong>.</p>
+            </div>
+            <div class="offer-card">
+                <span class="offer-icon">📺</span>
+                <h3>TV Series &amp; Shows</h3>
+                <p>Netflix, HBO Max, Amazon Prime, Disney+ originals — complete seasons, all episodes. Binge-watch on any device with <strong>iptv great</strong>.</p>
+            </div>
+            <div class="offer-card">
+                <span class="offer-icon">⚽</span>
+                <h3>Sports &amp; PPV Live</h3>
+                <p>NFL, NBA, Premier League, UEFA, UFC, WWE, Boxing, MMA — every PPV event live in real-time. Best <strong>iptv</strong> for sports fans.</p>
+            </div>
+            <div class="offer-card">
+                <span class="offer-icon">🌎</span>
+                <h3>International Channels</h3>
+                <p>USA, UK, Canada, France, Germany, Spain, Italy, Arab, India, Turkey &amp; 70+ more. Best <strong>iptv providers</strong> for expats worldwide.</p>
+            </div>
+            <div class="offer-card">
+                <span class="offer-icon">📱</span>
+                <h3>All Devices Supported</h3>
+                <p>Smart TV, Android, iOS, MAG, Fire TV Stick, Kodi, Formuler, Enigma2, PC &amp; Mac. Works on every device with any IPTV player app.</p>
+            </div>
+            <div class="offer-card">
+                <span class="offer-icon">⚡</span>
+                <h3>Anti-Freeze Technology</h3>
+                <p>Our proprietary anti-freeze servers guarantee zero buffering 99.99% of the time. Multiple global server clusters keep your stream smooth 24/7.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section style="background: #fff;">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-content">
+                <span class="section-tag">ABOUT IPTVGREAT</span>
+                <h2 class="section-title section-title-left">7 Years of Trusted IPTV Service — The Best Provider Worldwide</h2>
+                <p><strong>IPTVGreat</strong> has served tens of thousands of satisfied customers across 80+ countries for <strong>over 7 years</strong>. We are the <strong>best iptv provider</strong> trusted by cord-cutters worldwide.</p>
+                <ul>
+                    <li>140,000+ Live TV Channels — Every Genre</li>
+                    <li>100,000+ Movies &amp; TV Shows (VOD)</li>
+                    <li>99.99% Uptime — Multiple Global Servers</li>
+                    <li>Anti-Freeze Technology — Zero Buffering</li>
+                    <li>TV Guide EPG — 5 Days Ahead</li>
+                    <li>24/7 Live Customer Support</li>
+                </ul>
+                <a href="https://iptvgreat.store/shop/" class="btn-primary" target="_blank" rel="noopener">Subscribe Now</a>
+            </div>
+            <div>
+                <div class="about-stats">
+                    <div class="about-stat-card">
+                        <div class="num">7+</div>
+                        <div class="lbl">Years Trusted</div>
+                    </div>
+                    <div class="about-stat-card">
+                        <div class="num">50K+</div>
+                        <div class="lbl">Happy Customers</div>
+                    </div>
+                    <div class="about-stat-card">
+                        <div class="num">★ 4.93</div>
+                        <div class="lbl">RatingFacts Score</div>
+                    </div>
+                    <div class="about-stat-card">
+                        <div class="num">80+</div>
+                        <div class="lbl">Countries Served</div>
+                    </div>
+                    <div class="about-rating-box">
+                        <span class="stars">★★★★★</span>
+                        <div class="big">4.93 / 5</div>
+                        <a href="https://ratingfacts.com/reviews/iptvgreat.com" target="_blank" rel="noopener">Independently Verified — 146 reviews on RatingFacts.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== WHY CHOOSE ===== -->
+<section>
+    <div class="container">
+        <span class="section-tag">THE SMART CHOICE</span>
+        <h2 class="section-title">Why 50,000+ Customers Chose IPTVGreat Over Cable</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <span class="why-icon">💸</span>
+                <h3>10x Cheaper</h3>
+                <p>Plans start at $14.99/mo vs. $150+/mo for cable. Same channels, better quality, fraction of the price.</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">🌎</span>
+                <h3>10x More Content</h3>
+                <p>Cable gives ~300 channels. IPTVGreat delivers 140,000+ channels from every country on earth.</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">📱</span>
+                <h3>Any Device, Anywhere</h3>
+                <p>Cable locks you to one TV. IPTVGreat works on 10+ device types from anywhere in the world.</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">🎬</span>
+                <h3>Massive VOD Library</h3>
+                <p>100,000+ movies and all TV series on demand — no extra subscription needed. Updated daily.</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">⚡</span>
+                <h3>Zero Contracts</h3>
+                <p>No long-term contracts, no cancellation fees. Choose monthly, yearly, or lifetime — your call.</p>
+            </div>
+            <div class="why-card">
+                <span class="why-icon">🏆</span>
+                <h3>7 Years Experience</h3>
+                <p>7+ years of proven reliability — rated 4.93/5 on RatingFacts by 146 verified customers.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 32px;">
+            <a href="https://iptvgreat.store/shop/" class="btn-primary" target="_blank" rel="noopener">Choose Your Plan</a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section style="background: #fff;">
+    <div class="container">
+        <span class="section-tag">PRICING PLANS</span>
+        <h2 class="section-title">Affordable IPTV Subscriptions — Best Value 2026</h2>
+        <p class="section-sub">All plans include the complete channel list, full VOD library, EPG guide &amp; 24/7 support. Pay with card or crypto.</p>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>1 Connection</h3>
+                <p class="sub">Perfect for individuals</p>
+                <div class="price">$14<small>.99/mo</small></div>
+                <ul>
+                    <li>140,000+ Live TV Channels</li>
+                    <li>100,000+ Movies &amp; VOD</li>
+                    <li>HD, FHD &amp; 4K Streaming</li>
+                    <li>Sports, PPV &amp; Live Events</li>
+                    <li>TV Guide (EPG) Included</li>
+                    <li>Works on All Devices</li>
+                    <li>Anti-Freeze Technology</li>
+                    <li>24/7 Customer Support</li>
+                </ul>
+                <a href="https://iptvgreat.store/shop/" class="btn-pricing outline" target="_blank" rel="noopener">Buy Now</a>
+            </div>
+            <div class="pricing-card popular">
+                <span class="pricing-badge">⭐ MOST POPULAR</span>
+                <h3>2 Connections</h3>
+                <p class="sub">For couples &amp; families</p>
+                <div class="price">$26<small>.99/mo</small></div>
+                <ul>
+                    <li>140,000+ Live TV Channels</li>
+                    <li>100,000+ Movies &amp; VOD</li>
+                    <li>HD, FHD &amp; 4K Streaming</li>
+                    <li>Sports, PPV &amp; Live Events</li>
+                    <li>TV Guide (EPG) Included</li>
+                    <li>Works on All Devices</li>
+                    <li>Anti-Freeze Technology</li>
+                    <li>24/7 Customer Support</li>
+                </ul>
+                <a href="https://iptvgreat.store/shop/" class="btn-pricing" target="_blank" rel="noopener">Buy Now</a>
+            </div>
+            <div class="pricing-card">
+                <h3>5 Connections</h3>
+                <p class="sub">For large families</p>
+                <div class="price">$62<small>.99/mo</small></div>
+                <ul>
+                    <li>140,000+ Live TV Channels</li>
+                    <li>100,000+ Movies &amp; VOD</li>
+                    <li>HD, FHD &amp; 4K Streaming</li>
+                    <li>Sports, PPV &amp; Live Events</li>
+                    <li>TV Guide (EPG) Included</li>
+                    <li>Works on All Devices</li>
+                    <li>Anti-Freeze Technology</li>
+                    <li>24/7 Customer Support</li>
+                </ul>
+                <a href="https://iptvgreat.store/shop/" class="btn-pricing outline" target="_blank" rel="noopener">Buy Now</a>
+            </div>
+            <div class="pricing-card">
+                <span class="pricing-badge orange">90% OFF — LIFETIME</span>
+                <h3>Lifetime Access</h3>
+                <p class="sub">Pay once, watch forever</p>
+                <div class="price">$249<small>.99</small></div>
+                <ul>
+                    <li>140,000+ Live TV Channels</li>
+                    <li>100,000+ Movies &amp; VOD</li>
+                    <li>HD, FHD &amp; 4K Streaming</li>
+                    <li>Sports, PPV &amp; Live Events</li>
+                    <li>TV Guide (EPG) Included</li>
+                    <li>Works on All Devices</li>
+                    <li>Anti-Freeze Technology</li>
+                    <li>24/7 Customer Support</li>
+                </ul>
+                <a href="https://iptvgreat.store/shop/" class="btn-pricing" target="_blank" rel="noopener">Get Lifetime Deal</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section>
+    <div class="container">
+        <span class="section-tag">VERIFIED CUSTOMER REVIEWS</span>
+        <h2 class="section-title">What Customers Say About IPTVGreat</h2>
+        <div class="reviews-cta">
+            <a href="https://ratingfacts.com/reviews/iptvgreat.com" target="_blank" rel="noopener">
+                <span class="stars">★★★★★</span> <strong>4.93 / 5</strong> — 146 verified reviews on <strong>RatingFacts</strong>
+            </a>
+        </div>
+        <div class="reviews-grid" style="margin-top: 32px;">
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <blockquote>"IPTVGreat is the best iptv service I have ever used. Crystal clear channels, no buffering. Seven years in business and still the #1 choice. 100% recommend!"</blockquote>
+                <div class="review-author">
+                    <div class="review-avatar">M</div>
+                    <div>
+                        <div class="review-name">Michael T.</div>
+                        <div class="review-location">USA · Verified on RatingFacts</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <blockquote>"Tried many iptv providers but iptvgreat.com is by far the best. Amazing VOD library, 140k channels and the support team is outstanding. 4.93 rating says it all!"</blockquote>
+                <div class="review-author">
+                    <div class="review-avatar">S</div>
+                    <div>
+                        <div class="review-name">Sarah K.</div>
+                        <div class="review-location">UK · Verified on RatingFacts</div>
+                    </div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <blockquote>"Using iptv great for 4 years now. Zero downtime. Champions League in perfect 4K. IPTVGreat is 100% legit and reliable — the best iptv subscription money can buy."</blockquote>
+                <div class="review-author">
+                    <div class="review-avatar">C</div>
+                    <div>
+                        <div class="review-name">Carlos M.</div>
+                        <div class="review-location">Spain · Verified on RatingFacts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section style="background: #fff;">
+    <div class="container">
+        <span class="section-tag">FAQ</span>
+        <h2 class="section-title">Frequently Asked Questions About IPTVGreat</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    Is IPTVGreat legit and safe to use?
+                    <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    Yes, <strong>IPTVGreat is 100% legit</strong>. With 7+ years of operation and a <strong>4.93/5 score on RatingFacts</strong> based on 146 real reviews, IPTVGreat is one of the most trusted <strong>iptv providers</strong> worldwide.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What devices does IPTVGreat work on?
+                    <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    IPTVGreat works on Smart TVs (Samsung, LG, Sony), Android TV, Amazon Fire TV Stick, Apple TV, iPhone, iPad, Android phones, MAG boxes, Formuler, Enigma2, Kodi, PC, Mac — any device with an IPTV player.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How many channels does IPTVGreat have?
+                    <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <strong>IPTVGreat provides 140,000+ live TV channels</strong> from 80+ countries plus 100,000+ movies and TV series on demand, making it the <strong>best iptv provider</strong> for international content.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What payment methods does IPTVGreat accept?
+                    <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    IPTVGreat accepts <strong>Visa, Mastercard, American Express</strong> (credit &amp; debit cards), plus <strong>Bitcoin, Ethereum, USDT, Litecoin</strong> and other cryptocurrencies. All payments are 100% secure and encrypted.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    What makes IPTVGreat the best IPTV service?
+                    <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <strong>7 years of experience</strong>, 99.99% uptime guarantee, anti-freeze technology, 140K+ channels, affordable pricing, and dedicated 24/7 support. Rated 4.93/5 on RatingFacts — the best iptv 2026 choice.
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    How do I get started with IPTVGreat?
+                    <span class="icon"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    1) Choose your plan at iptvgreat.store → 2) Complete secure payment with card or crypto → 3) Receive login credentials instantly → 4) Install any IPTV player app → 5) Start watching 140,000+ channels!
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COMPARISON TABLE ===== -->
+<section>
+    <div class="container">
+        <span class="section-tag">IPTV COMPLETE GUIDE 2026</span>
+        <h2 class="section-title">Best IPTV 2026 — Complete IPTVGreat Review &amp; Buying Guide</h2>
+        <p class="section-sub">Searching for the <strong>best IPTV provider in 2026</strong>? <strong>IPTVGreat</strong> has been rated the #1 iptv service by tens of thousands worldwide.</p>
+        <div class="table-wrap">
+            <table class="cmp-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>IPTVGreat</th>
+                        <th>Others</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Channels</td><td class="highlight">140,000+</td><td>20,000-80,000</td></tr>
+                    <tr><td>VOD Library</td><td class="highlight">100,000+</td><td>10,000-50,000</td></tr>
+                    <tr><td>Uptime</td><td class="highlight">99.99%</td><td>85%-95%</td></tr>
+                    <tr><td>Rating</td><td class="highlight">4.93/5 ★</td><td>3.0-4.0</td></tr>
+                    <tr><td>Price</td><td class="highlight">From $14.99/mo</td><td>$20-$40/mo</td></tr>
+                    <tr><td>Years in Business</td><td class="highlight">7+ Years</td><td>1-3 Years</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!-- ===== COUNTRIES & PAYMENTS ===== -->
+<section style="background: #fff;">
+    <div class="container">
+        <span class="section-tag">GLOBAL COVERAGE &amp; PAYMENTS</span>
+        <h2 class="section-title">Supported Countries &amp; Secure Payment Methods</h2>
+        <p class="section-sub">IPTVGreat serves 80+ countries worldwide. We accept all major cards and crypto.</p>
+        <div class="countries-wrap">
+            <span class="country-tag">USA</span>
+            <span class="country-tag">UK</span>
+            <span class="country-tag">Canada</span>
+            <span class="country-tag">Australia</span>
+            <span class="country-tag">France</span>
+            <span class="country-tag">Germany</span>
+            <span class="country-tag">Spain</span>
+            <span class="country-tag">Italy</span>
+            <span class="country-tag">Saudi Arabia</span>
+            <span class="country-tag">UAE</span>
+            <span class="country-tag">Turkey</span>
+            <span class="country-tag">India</span>
+            <span class="country-tag">Pakistan</span>
+            <span class="country-tag">Greece</span>
+            <span class="country-tag">Romania</span>
+            <span class="country-tag">Netherlands</span>
+            <span class="country-tag">Belgium</span>
+            <span class="country-tag">Portugal</span>
+            <span class="country-tag">Morocco</span>
+            <span class="country-tag">Algeria</span>
+            <span class="country-tag">Nigeria</span>
+            <span class="country-tag">South Africa</span>
+            <span class="country-tag">+ 58 More Countries</span>
+        </div>
+        <h3 style="text-align: center; font-size: 20px; color: #1a1a2e; margin-top: 32px;">🔐 Secure Payment Methods Accepted</h3>
+        <div class="payment-methods">
+            <span class="payment-badge"><i class="fab fa-cc-visa" style="color: #1a1f71;"></i> VISA</span>
+            <span class="payment-badge"><i class="fab fa-cc-mastercard" style="color: #eb001b;"></i> Mastercard</span>
+            <span class="payment-badge"><i class="fab fa-cc-amex" style="color: #2e77bc;"></i> AMEX</span>
+            <span class="payment-badge"><i class="fab fa-cc-discover" style="color: #ff6000;"></i> Discover</span>
+            <span class="payment-badge"><i class="fab fa-bitcoin" style="color: #f7931a;"></i> Bitcoin</span>
+            <span class="payment-badge"><i class="fab fa-ethereum" style="color: #627eea;"></i> Ethereum</span>
+            <span class="payment-badge">USDT</span>
+            <span class="payment-badge"><i class="fab fa-bitcoin" style="color: #f7931a;"></i> Litecoin</span>
+        </div>
+        <p style="text-align: center; margin-top: 16px; font-size: 14px; color: #8a8d9e;">🔒 All payments encrypted with SSL · Instant account delivery · No hidden fees</p>
+    </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+    <h2>Ready to Watch? Subscribe to IPTVGreat Today!</h2>
+    <p>Join 50,000+ happy customers streaming with IPTVGreat — the <strong>best iptv subscription</strong> for 2026. Affordable, ultra-reliable, 140K+ channels, and 4.93★ rated.</p>
+    <div class="hero-buttons">
+        <a href="https://iptvgreat.store/shop/" class="btn-primary" target="_blank" rel="noopener">Subscribe Now</a>
+        <a href="https://iptvgreat.store/shop/" class="btn-secondary" target="_blank" rel="noopener">View All Plans</a>
+    </div>
+    <div class="cta-rating">
+        <a href="https://ratingfacts.com/reviews/iptvgreat.com" target="_blank" rel="noopener">
+            <span class="stars">★</span> <strong>4.93/5</strong> · 146 reviews on <strong>RatingFacts</strong>
+        </a>
+    </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer">
+    <div class="container">
+        <p>&copy; 2026 IPTVGreat. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- ===== SCROLL TO TOP ===== -->
+<a href="#" id="scroll-top" aria-label="Scroll to top" style="position: fixed; bottom: 24px; right: 24px; width: 44px; height: 44px; background: linear-gradient(135deg, #7c3aed, #a855f7); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; box-shadow: 0 4px 16px rgba(124,58,237,0.3); z-index: 999; opacity: 0; visibility: hidden; transition: all 0.3s;">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+<script>
+    // Mobile menu toggle
+    function toggleMenu() {
+        document.getElementById('main-nav').classList.toggle('open');
+    }
+
+    // FAQ accordion
+    function toggleFaq(btn) {
+        btn.classList.toggle('active');
+        const answer = btn.nextElementSibling;
+        answer.classList.toggle('open');
+    }
+
+    // Open first FAQ by default
+    document.addEventListener('DOMContentLoaded', function() {
+        const firstFaq = document.querySelector('.faq-question');
+        if (firstFaq) {
+            firstFaq.classList.add('active');
+            firstFaq.nextElementSibling.classList.add('open');
+        }
+    });
+
+    // Scroll to top button
+    window.addEventListener('scroll', function() {
+        const btn = document.getElementById('scroll-top');
+        if (window.scrollY > 400) {
+            btn.style.opacity = '1';
+            btn.style.visibility = 'visible';
+        } else {
+            btn.style.opacity = '0';
+            btn.style.visibility = 'hidden';
+        }
+    });
+</script>
+
+</body>
+</html>
